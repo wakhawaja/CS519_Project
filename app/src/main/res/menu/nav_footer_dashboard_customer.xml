@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_search_medicine_cust"
+            android:icon="@drawable/ic_search"
+            android:title="Search Medicine" />
+        <item
+            android:id="@+id/nav_order_presc_cust"
+            android:icon="@drawable/ic_order"
+            android:title="Prescription Based Order" />
+        <item
+            android:id="@+id/nav_order_current_cust"
+            android:icon="@drawable/ic_order"
+            android:title="Current Orders" />
+        <item
+            android:id="@+id/nav_history_cust"
+            android:icon="@drawable/ic_order"
+            android:title="Orders History" />
+        <item
+            android:id="@+id/nav_cart_cust"
+            android:icon="@drawable/ic_cart"
+            android:title="My Cart" />
+        <item
+            android:id="@+id/nav_profile_cust"
+            android:icon="@drawable/ic_person"
+            android:title="Profile" />
+    </group>
+    <item android:title="services">
+        <menu>
+            <item
+                android:id="@+id/nav_signOut_cust"
+                android:title="Sign Out" />
+        </menu>
+    </item>
+</menu>

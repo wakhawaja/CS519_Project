@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/ic_cart.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/ic_email.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/ic_help.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/ic_location.xml" value="0.1125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/ic_name.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/ic_password.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/ic_person.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/ic_phone.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/ic_search.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable-v24/morpheus_den_022.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable/ic_notifications.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable/ic_order.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/drawable/splash_activity_background.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/activity_custdashboard.xml" value="0.22" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/activity_registeration.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/activity_registration.xml" value="0.25" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_chat.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_cust_cart.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_cust_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_cust_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_message.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_reg_signIn.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_reg_signin.xml" value="0.1" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_sign_in.xml" value="0.4083333333333333" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/nav_handler_dashboard_cust.xml" value="0.33" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/nav_handler_dashboard_customer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/navhandler_dashboard_customer.xml" value="0.5" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/menu/menu_dashboard.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/menu/nav.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/menu/nav_footer_dashboard.xml" value="0.5" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/menu/nav_footer_dashboard_cust.xml" value="0.2" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/menu/nav_footer_dashboard_customer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/menu/navhandler_dashboard_customer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
