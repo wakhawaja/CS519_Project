@@ -28,6 +28,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,38 +64,44 @@ public class Fragment_SignUp extends Fragment {
         Button btn_sign_up = view.findViewById(R.id.sign_up_btn);
         btn_sign_up.setOnClickListener(view1 -> {
             TextInputEditText mName = view.findViewById(R.id.sign_up_name);
-            String name = mName.getText().toString().trim();
+            String name = Objects.requireNonNull(mName.getText()).toString().trim();
             TextInputEditText mMobile = view.findViewById(R.id.sign_up_mobile);
-            String mobile = mMobile.getText().toString().trim();
+            String mobile = Objects.requireNonNull(mMobile.getText()).toString().trim();
             TextInputEditText mLongitude = view.findViewById(R.id.sign_up_longitude);
-            String longitude = mLongitude.getText().toString().trim();
+            String longitude = Objects.requireNonNull(mLongitude.getText()).toString().trim();
             TextInputEditText mLatitude = view.findViewById(R.id.sign_up_latitude);
-            String latitude = mLatitude.getText().toString().trim();
+            String latitude = Objects.requireNonNull(mLatitude.getText()).toString().trim();
             TextInputEditText mEmail = view.findViewById(R.id.sign_up_email);
-            String email = mEmail.getText().toString().trim();
+            String email = Objects.requireNonNull(mEmail.getText()).toString().trim();
             TextInputEditText mPass = view.findViewById(R.id.sign_up_password);
-            String password = mPass.getText().toString().trim();
+            String password = Objects.requireNonNull(mPass.getText()).toString().trim();
             TextInputEditText mPass2 = view.findViewById(R.id.sign_up_re_password);
-            String password2 = mPass2.getText().toString().trim();
-            if(name.isEmpty()||mobile.isEmpty()||email.isEmpty()
-                    ||longitude.isEmpty()||latitude.isEmpty()
-                    ||password.isEmpty()||password2.isEmpty()||!password.equals(password2)){
+            String password2 = Objects.requireNonNull(mPass2.getText()).toString().trim();
+
+            if (name.isEmpty() || mobile.isEmpty() || email.isEmpty() || longitude.isEmpty()
+                    || latitude.isEmpty() || password.isEmpty() || password2.isEmpty()) {
                 Toast.makeText(requireActivity(),
                         "Error : please check all input fields", Toast.LENGTH_LONG).show();
                 return;
             }
-                registerUser(name, mobile, longitude, email, password);
+            if (!password.equals(password2)) {
+                Toast.makeText(requireActivity(),
+                        "Error : both password must match", Toast.LENGTH_LONG).show();
+                return;
+            }
+            registerUser(name, mobile, email, password, longitude, latitude);
         });
     }
 
     private void setFragment() {
         FragmentTransaction fragmentTransaction = requireActivity().getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.setCustomAnimations(R.anim.slide_in_from_left,R.anim.slide_out_from_right);
+        fragmentTransaction.setCustomAnimations(R.anim.slide_in_from_left, R.anim.slide_out_from_right);
         fragmentTransaction.replace(parentFrameLayout.getId(), new Fragment_SignIn());
         fragmentTransaction.commit();
     }
 
-    private void registerUser(String name, String mobile, String location, String email, String password) {
+    private void registerUser(String ruName, String ruMobile, String ruEmail,
+                              String ruPassword, String ruLongitude, String ruLatitude) {
         progressBar.setVisibility(View.VISIBLE);
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.URL_REGISTER,
@@ -107,17 +114,17 @@ public class Fragment_SignUp extends Fragment {
                         Toast.makeText(requireActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }, error -> {
-                    progressBar.setVisibility(View.GONE);
-                    Toast.makeText(requireActivity(), error.getMessage(), Toast.LENGTH_LONG).show();
-                }) {
+            progressBar.setVisibility(View.GONE);
+            Toast.makeText(requireActivity(), error.getMessage(), Toast.LENGTH_LONG).show();
+        }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("name", name);
-                params.put("mobile", mobile);
-                params.put("location", location);
-                params.put("email", email);
-                params.put("pass", password);
+                params.put("name", ruName);
+                params.put("mobile", ruMobile);
+                params.put("email", ruEmail);
+                params.put("pass", ruPassword);
+                params.put("location", ruLongitude + " , " + ruLatitude);
                 return params;
             }
         };

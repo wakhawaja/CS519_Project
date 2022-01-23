@@ -26,10 +26,11 @@
         <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_chat.xml" value="0.20416666666666666" />
         <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_cust_cart.xml" value="0.20416666666666666" />
         <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_cust_profile.xml" value="0.20416666666666666" />
-        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_cust_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_cust_search.xml" value="0.18" />
         <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_message.xml" value="0.20416666666666666" />
         <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_reg_signIn.xml" value="0.20416666666666666" />
         <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_reg_signin.xml" value="0.1" />
+        <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_reg_signup.xml" value="0.20416666666666666" />
         <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_sign_in.xml" value="0.4083333333333333" />
         <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
         <entry key="..\:/Dev/Projects/Android Studio_AndroidProjects/CS519_PMS/app/src/main/res/layout/nav_handler_dashboard_cust.xml" value="0.33" />
