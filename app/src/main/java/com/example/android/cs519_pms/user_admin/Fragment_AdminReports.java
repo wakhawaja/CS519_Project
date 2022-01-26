@@ -1,4 +1,4 @@
-package com.example.android.cs519_pms.customer;
+package com.example.android.cs519_pms.user_admin;
 
 
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.android.cs519_pms.R;
 
-public class Fragment_Cart extends Fragment {
+public class Fragment_AdminReports extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

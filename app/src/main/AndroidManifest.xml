@@ -16,7 +16,15 @@
             android:exported="false"
             android:theme="@style/RegistrationTheme" />
         <activity
-            android:name=".customer.CustomerDashboardActivity"
+            android:name=".user_customer.CustomerDashboardActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionbar" />
+        <activity
+            android:name=".user_admin.AdminDashboardActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionbar" />
+        <activity
+            android:name=".user_pharmacy.PharmacyDashboardActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionbar" />
         <activity

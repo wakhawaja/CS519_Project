@@ -1,4 +1,4 @@
-package com.example.android.cs519_pms.customer;
+package com.example.android.cs519_pms.user_pharmacy;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,7 +21,7 @@ import com.example.android.cs519_pms.registration.RegistrationActivity;
 import com.google.android.material.navigation.NavigationView;
 
 
-public class CustomerDashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class PharmacyDashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
 
     @Override
@@ -57,7 +57,7 @@ public class CustomerDashboardActivity extends AppCompatActivity implements Navi
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(
-                    R.id.fragment_Container_customer, new Fragment_Search()).commit();
+                    R.id.fragment_Container_customer, new Fragment_PharmaProfile()).commit();
             navigationView.setCheckedItem(R.id.nav_search_medicine_cust);
         }
     }
@@ -74,13 +74,13 @@ public class CustomerDashboardActivity extends AppCompatActivity implements Navi
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        Fragment fragment = null;
+        Fragment fragment;
         if (id == R.id.nav_search_medicine_cust) {
-            fragment = new Fragment_Search();
+            fragment = new Fragment_PharmaProfile();
         } else if (id == R.id.nav_cart_cust) {
-            fragment = new Fragment_Cart();
+            fragment = new Fragment_OrderReceived();
         } else if (id == R.id.nav_profile_cust) {
-            fragment = new Fragment_Profile();
+            fragment = new Fragment_UpdateInventory();
         } else if (id == R.id.nav_signOut_cust) {
             //Handle sign out Here:
             SharedPrefManager.getInstance(getApplicationContext()).logout();
@@ -90,10 +90,8 @@ public class CustomerDashboardActivity extends AppCompatActivity implements Navi
         } else {
             return false;
         }
-        if (fragment != null) {
-            getSupportFragmentManager().beginTransaction().replace(
-                    R.id.fragment_Container_customer, fragment).commit();
-        }
+        getSupportFragmentManager().beginTransaction().replace(
+                R.id.fragment_Container_customer, fragment).commit();
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }

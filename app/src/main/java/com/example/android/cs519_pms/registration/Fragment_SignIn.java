@@ -18,14 +18,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.example.android.cs519_pms.R;
-import com.example.android.cs519_pms.customer.CustomerDashboardActivity;
 import com.example.android.cs519_pms.database.Constants;
 import com.example.android.cs519_pms.database.RequestHandler;
 import com.example.android.cs519_pms.database.SharedPrefManager;
+import com.example.android.cs519_pms.user_admin.AdminDashboardActivity;
+import com.example.android.cs519_pms.user_customer.CustomerDashboardActivity;
+import com.example.android.cs519_pms.user_pharmacy.PharmacyDashboardActivity;
 import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONException;
@@ -33,6 +34,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -67,8 +69,8 @@ public class Fragment_SignIn extends Fragment {
         btn_sign_In.setOnClickListener(view1 -> {
             TextInputEditText mEmail = requireActivity().findViewById(R.id.sign_in_email);
             TextInputEditText mPassword = requireActivity().findViewById(R.id.sign_in_password);
-            final String email = mEmail.getText().toString().trim();
-            final String password = mPassword.getText().toString().trim();
+            final String email = Objects.requireNonNull(mEmail.getText()).toString().trim();
+            final String password = Objects.requireNonNull(mPassword.getText()).toString().trim();
             if (!email.isEmpty() && !password.isEmpty()) {
                 userSignIn(email, password);
             } else {
@@ -120,7 +122,7 @@ public class Fragment_SignIn extends Fragment {
                     Toast.makeText(requireActivity(), error.getMessage(), Toast.LENGTH_LONG).show();
                 }) {
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
+            protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
                 params.put("email", email);
                 params.put("pass", password);
@@ -135,19 +137,16 @@ public class Fragment_SignIn extends Fragment {
 
     private void dashboardActivity(Context context) {
         if (SharedPrefManager.getInstance(requireActivity()).getUserType() == 1) {
+            Intent intent = new Intent(context, AdminDashboardActivity.class);
+            startActivity(intent);
+            requireActivity().finish();
+        } else if (SharedPrefManager.getInstance(requireActivity()).getUserType() == 2) {
+            Intent intent = new Intent(context, PharmacyDashboardActivity.class);
+            startActivity(intent);
+            requireActivity().finish();
+        } else if (SharedPrefManager.getInstance(requireActivity()).getUserType() == 3) {
             Intent intent = new Intent(context, CustomerDashboardActivity.class);
             startActivity(intent);
             requireActivity().finish();
-        }
-        if (SharedPrefManager.getInstance(requireActivity()).getUserType() == 2) {
-            Intent intent = new Intent(context, CustomerDashboardActivity.class);
-            startActivity(intent);
-            requireActivity().finish();
-        }
-        if (SharedPrefManager.getInstance(requireActivity()).getUserType() == 3) {
-            Intent intent = new Intent(context, CustomerDashboardActivity.class);
-            startActivity(intent);
-            requireActivity().finish();
-        }
-    }
+        }    }
 }

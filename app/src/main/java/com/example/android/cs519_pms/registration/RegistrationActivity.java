@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.widget.FrameLayout;
 
 import com.example.android.cs519_pms.R;
-import com.example.android.cs519_pms.customer.CustomerDashboardActivity;
 import com.example.android.cs519_pms.database.SharedPrefManager;
+import com.example.android.cs519_pms.user_admin.AdminDashboardActivity;
+import com.example.android.cs519_pms.user_customer.CustomerDashboardActivity;
+import com.example.android.cs519_pms.user_pharmacy.PharmacyDashboardActivity;
 
 public class RegistrationActivity extends AppCompatActivity {
     private FrameLayout frameLayout;
@@ -29,11 +31,11 @@ public class RegistrationActivity extends AppCompatActivity {
 
     private void dashboardActivity(Context context) {
         if (SharedPrefManager.getInstance(this).getUserType() == 1) {
-            Intent intent = new Intent(context, CustomerDashboardActivity.class);
+            Intent intent = new Intent(context, AdminDashboardActivity.class);
             startActivity(intent);
             finish();
         } else if (SharedPrefManager.getInstance(this).getUserType() == 2) {
-            Intent intent = new Intent(context, CustomerDashboardActivity.class);
+            Intent intent = new Intent(context, PharmacyDashboardActivity.class);
             startActivity(intent);
             finish();
         } else if (SharedPrefManager.getInstance(this).getUserType() == 3) {
