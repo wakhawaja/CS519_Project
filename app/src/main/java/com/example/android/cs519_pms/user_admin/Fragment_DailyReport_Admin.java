@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.android.cs519_pms.R;
 
-public class Fragment_PharmaRegRequest extends Fragment {
+public class Fragment_DailyReport_Admin extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cust_cart,container,false);
+        return inflater.inflate(R.layout.fragment_admin_dailyreport,container,false);
     }
 }

@@ -40,11 +40,7 @@ public class SharedPrefManager {
 
     public boolean isLogin() {
         SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        if (sharedPreferences.getInt(KEY_USER_ID, -1) != -1) {
-            return true;
-        } else {
-            return false;
-        }
+        return sharedPreferences.getInt(KEY_USER_ID, -1) != -1;
     }
 
     public boolean logout() {

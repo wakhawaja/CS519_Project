@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_newCat_admin"
+            android:icon="@drawable/ic_order"
+            android:title="Create New Category" />
+        <item
+            android:id="@+id/nav_custReport_admin"
+            android:icon="@drawable/ic_order"
+            android:title="Customer Report" />
+        <item
+            android:id="@+id/nav_catReport_admin"
+            android:icon="@drawable/ic_order"
+            android:title="Category Report" />
+        <item
+            android:id="@+id/nav_dailyReport_admin"
+            android:icon="@drawable/ic_order"
+            android:title="Daily Report" />
+        <item
+            android:id="@+id/nav_regRequest_admin"
+            android:icon="@drawable/ic_order"
+            android:title="Registration Request" />
+    </group>
+    <item android:title="services">
+        <menu>
+            <item
+                android:id="@+id/nav_signOut_admin"
+                android:title="Sign Out" />
+        </menu>
+    </item>
+</menu>

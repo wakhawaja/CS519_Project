@@ -24,9 +24,9 @@ import com.example.android.cs519_pms.R;
 import com.example.android.cs519_pms.database.Constants;
 import com.example.android.cs519_pms.database.RequestHandler;
 import com.example.android.cs519_pms.database.SharedPrefManager;
-import com.example.android.cs519_pms.user_admin.AdminDashboardActivity;
-import com.example.android.cs519_pms.user_customer.CustomerDashboardActivity;
-import com.example.android.cs519_pms.user_pharmacy.PharmacyDashboardActivity;
+import com.example.android.cs519_pms.user_admin.AdminActivity;
+import com.example.android.cs519_pms.user_customer.CustomerActivity;
+import com.example.android.cs519_pms.user_pharmacy.PharmacyActivity;
 import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONException;
@@ -137,15 +137,15 @@ public class Fragment_SignIn extends Fragment {
 
     private void dashboardActivity(Context context) {
         if (SharedPrefManager.getInstance(requireActivity()).getUserType() == 1) {
-            Intent intent = new Intent(context, AdminDashboardActivity.class);
+            Intent intent = new Intent(context, AdminActivity.class);
             startActivity(intent);
             requireActivity().finish();
         } else if (SharedPrefManager.getInstance(requireActivity()).getUserType() == 2) {
-            Intent intent = new Intent(context, PharmacyDashboardActivity.class);
+            Intent intent = new Intent(context, PharmacyActivity.class);
             startActivity(intent);
             requireActivity().finish();
         } else if (SharedPrefManager.getInstance(requireActivity()).getUserType() == 3) {
-            Intent intent = new Intent(context, CustomerDashboardActivity.class);
+            Intent intent = new Intent(context, CustomerActivity.class);
             startActivity(intent);
             requireActivity().finish();
         }    }

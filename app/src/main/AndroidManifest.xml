@@ -16,15 +16,15 @@
             android:exported="false"
             android:theme="@style/RegistrationTheme" />
         <activity
-            android:name=".user_customer.CustomerDashboardActivity"
+            android:name=".user_customer.CustomerActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionbar" />
         <activity
-            android:name=".user_admin.AdminDashboardActivity"
+            android:name=".user_admin.AdminActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionbar" />
         <activity
-            android:name=".user_pharmacy.PharmacyDashboardActivity"
+            android:name=".user_pharmacy.PharmacyActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionbar" />
         <activity

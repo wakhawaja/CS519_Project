@@ -4,26 +4,22 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_search_medicine_cust"
-            android:icon="@drawable/ic_search"
-            android:title="Search Medicine" />
-        <item
-            android:id="@+id/nav_order_cust"
+            android:id="@+id/nav_order_pharma"
             android:icon="@drawable/ic_order"
-            android:title="Prescription Based Order" />
+            android:title="Orders" />
         <item
-            android:id="@+id/nav_cart_cust"
-            android:icon="@drawable/ic_cart"
-            android:title="My Cart" />
+            android:id="@+id/nav_updateInventory_pharma"
+            android:icon="@drawable/ic_order"
+            android:title="Update Inventory" />
         <item
-            android:id="@+id/nav_profile_cust"
+            android:id="@+id/nav_profile_pharma"
             android:icon="@drawable/ic_person"
             android:title="Profile" />
     </group>
     <item android:title="services">
         <menu>
             <item
-                android:id="@+id/nav_signOut_cust"
+                android:id="@+id/nav_signOut_pharma"
                 android:title="Sign Out" />
         </menu>
     </item>

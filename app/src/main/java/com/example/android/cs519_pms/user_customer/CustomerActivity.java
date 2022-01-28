@@ -1,4 +1,4 @@
-package com.example.android.cs519_pms.user_pharmacy;
+package com.example.android.cs519_pms.user_customer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,29 +21,29 @@ import com.example.android.cs519_pms.registration.RegistrationActivity;
 import com.google.android.material.navigation.NavigationView;
 
 
-public class PharmacyDashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class CustomerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (!SharedPrefManager.getInstance(this).isLogin()) {
-            finish();
             startActivity(new Intent(this, RegistrationActivity.class));
+            finish();
             return;
         }
-        setContentView(R.layout.activity_custdashboard);
+        setContentView(R.layout.activity_customer);
         Toast.makeText(this, SharedPrefManager.getInstance(this).getUserName(), Toast.LENGTH_LONG).show();
 
-        Toolbar toolbar = findViewById(R.id.toolbar_customer);
+        Toolbar toolbar = findViewById(R.id.toolbar_Customer);
         setSupportActionBar(toolbar);
-        drawerLayout = findViewById(R.id.main_drawer_layout_customer);
+        drawerLayout = findViewById(R.id.main_drawer_layout_Customer);
 
-        NavigationView navigationView = findViewById(R.id.nav_view_customer);
+        NavigationView navigationView = findViewById(R.id.nav_view_Customer);
         View headerView = navigationView.getHeaderView(0);
         // get user name and email textViews
-        TextView userName = headerView.findViewById(R.id.dashboard_fullName_cust);
-        TextView userEmail = headerView.findViewById(R.id.dashboard_emailID_cust);
+        TextView userName = headerView.findViewById(R.id.dashboard_fullName);
+        TextView userEmail = headerView.findViewById(R.id.dashboard_emailID);
         // set user name and email
         userName.setText(SharedPrefManager.getInstance(this).getUserName());
         userEmail.setText(SharedPrefManager.getInstance(this).getUserLocation());
@@ -57,7 +57,7 @@ public class PharmacyDashboardActivity extends AppCompatActivity implements Navi
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(
-                    R.id.fragment_Container_customer, new Fragment_PharmaProfile()).commit();
+                    R.id.fragment_Container_Customer, new Fragment_Search_Cust()).commit();
             navigationView.setCheckedItem(R.id.nav_search_medicine_cust);
         }
     }
@@ -76,11 +76,13 @@ public class PharmacyDashboardActivity extends AppCompatActivity implements Navi
         int id = item.getItemId();
         Fragment fragment;
         if (id == R.id.nav_search_medicine_cust) {
-            fragment = new Fragment_PharmaProfile();
+            fragment = new Fragment_Search_Cust();
         } else if (id == R.id.nav_cart_cust) {
-            fragment = new Fragment_OrderReceived();
+            fragment = new Fragment_Cart_Cust();
+        } else if (id == R.id.nav_order_cust) {
+            fragment = new Fragment_Order_Cust();
         } else if (id == R.id.nav_profile_cust) {
-            fragment = new Fragment_UpdateInventory();
+            fragment = new Fragment_Profile_Cust();
         } else if (id == R.id.nav_signOut_cust) {
             //Handle sign out Here:
             SharedPrefManager.getInstance(getApplicationContext()).logout();
@@ -91,7 +93,7 @@ public class PharmacyDashboardActivity extends AppCompatActivity implements Navi
             return false;
         }
         getSupportFragmentManager().beginTransaction().replace(
-                R.id.fragment_Container_customer, fragment).commit();
+                R.id.fragment_Container_Customer, fragment).commit();
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }

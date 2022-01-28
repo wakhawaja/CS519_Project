@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.android.cs519_pms.R;
 
-public class Fragment_OrderReceived extends Fragment {
+public class Fragment_Profile_Pharmacy extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_cust_cart,container,false);
+        return inflater.inflate(R.layout.fragment_pharma_profile,container,false);
     }
 }

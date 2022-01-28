@@ -2,7 +2,7 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_drawer_layout_customer"
+    android:id="@+id/main_drawer_layout_Pharma"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_customer"
+            android:id="@+id/toolbar_Pharma"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@drawable/morpheus_den_022"
@@ -32,16 +32,16 @@
         </androidx.appcompat.widget.Toolbar>
 
         <FrameLayout
-            android:id="@+id/fragment_Container_customer"
+            android:id="@+id/fragment_Container_Pharma"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view_customer"
+        android:id="@+id/nav_view_Pharma"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/navhandler_dashboard_customer"
-        app:menu="@menu/nav_footer_dashboard_customer" />
+        app:headerLayout="@layout/nav_handler_dashboard"
+        app:menu="@menu/nav_footer_dashboard_pharmacy" />
 </androidx.drawerlayout.widget.DrawerLayout>

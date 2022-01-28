@@ -9,14 +9,14 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/dashboard_profile_image_cust"
+        android:id="@+id/dashboard_profile_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="NavigationHeader"
         android:src="@mipmap/ic_launcher_round" />
 
     <TextView
-        android:id="@+id/dashboard_fullName_cust"
+        android:id="@+id/dashboard_fullName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
@@ -24,7 +24,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-        android:id="@+id/dashboard_emailID_cust"
+        android:id="@+id/dashboard_emailID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email@android.com" />
